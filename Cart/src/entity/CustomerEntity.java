@@ -1,6 +1,16 @@
-package model;
+package entity;
 
-public class Customer {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="CUSTOMER")
+public class CustomerEntity {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int customerId;
 	private String name;
 	private String email;
@@ -8,7 +18,6 @@ public class Customer {
 	private String password;
 	private String address;
 	private char customerType;
-	
 	
 	public int getCustomerId() {
 		return customerId;
@@ -52,7 +61,7 @@ public class Customer {
 	public void setCustomerType(char customerType) {
 		this.customerType = customerType;
 	}
-
+	
 	
 
 }

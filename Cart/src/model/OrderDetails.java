@@ -3,36 +3,27 @@ package model;
 import java.util.Date;
 
 public class OrderDetails {
-	private String productName;
-	private String productCategory;
-	private String productImage;
-	private float productPrice;
+	private int orderId;
+	private Customer customer;
+	private Product product;
 	private Date orderDate;
-	
-	
-	public String getProductName() {
-		return productName;
+	public int getOrderId() {
+		return orderId;
 	}
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
 	}
-	public String getProductCategory() {
-		return productCategory;
+	public Customer getCustomer() {
+		return customer;
 	}
-	public void setProductCategory(String productCategory) {
-		this.productCategory = productCategory;
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
-	public String getProductImage() {
-		return productImage;
+	public Product getProduct() {
+		return product;
 	}
-	public void setProductImage(String productImage) {
-		this.productImage = productImage;
-	}
-	public float getProductPrice() {
-		return productPrice;
-	}
-	public void setProductPrice(float productPrice) {
-		this.productPrice = productPrice;
+	public void setProduct(Product product) {
+		this.product = product;
 	}
 	public Date getOrderDate() {
 		return orderDate;
@@ -41,6 +32,4 @@ public class OrderDetails {
 		this.orderDate = orderDate;
 	}
 	
-	
-
 }
